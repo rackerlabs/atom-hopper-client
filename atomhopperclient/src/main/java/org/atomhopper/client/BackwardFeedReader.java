@@ -19,10 +19,10 @@ public class BackwardFeedReader implements Iterable<FeedPage> {
 
     @Override
     public Iterator<FeedPage> iterator() {
-        return new BackwardFeedPageIterator();
+        return new BackwardFeedReaderIterator();
     }
 
-    public class BackwardFeedPageIterator implements Iterator<FeedPage> {
+    public class BackwardFeedReaderIterator implements Iterator<FeedPage> {
 
         @Override
         public boolean hasNext() {

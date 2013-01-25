@@ -50,10 +50,14 @@ public class FeedReader {
         config.setSelfDirection(feedPage.getSelfPageDirection());
     }
 
+    public FeedPage getFeedHeadPage() {
+        return getFeedPage(buildFeedHeadLink());
+    }
+
     public FeedPage getFeedPage() {
 
         if (StringUtils.isBlank(config.getSelfMarker())) {
-            return getFeedPage(buildFeedHeadLink());
+            return getFeedHeadPage();
         }
 
         return getFeedPage(buildSelfLink());
